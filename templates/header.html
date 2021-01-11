@@ -2,7 +2,7 @@
         <div>
             <h1 class="fragment_logo">Fragment</h1>
         </div>
-        <div class="fragment_logo">
+        <div>
             <span>nav1</span>
             <span>nav2</span>
             <span>nav3</span>
@@ -11,6 +11,9 @@
                 <span>login</span>
             </a>
             {% else %}
+            <a href="{% url 'accountapp:detail' pk=user.pk %}">
+                <span>MyPage</span>
+            </a>
             <a href="{% url 'accountapp:logout' %}?next={{ request.path }}">
                 <span>logout</span>
             </a>
