@@ -7,7 +7,7 @@
     <div class="mb-4">
         <h4>Sing Up</h4>
     </div>
-    <form action="{% url 'accountapp:create' %}" method="POST">
+    <form action="{% url 'accountapp:create' %}" method="post">
         {% csrf_token %}
 <!--        {{ form }}-->
         {% bootstrap_form form %}
